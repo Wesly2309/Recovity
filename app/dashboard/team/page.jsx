@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { rethink_sans, roboto } from "../../../libs/fonts";
 
-export default function HalamanProfile() {
+export default function HalamanTeam() {
   return (
     <>
       {/* Header Section */}
@@ -12,7 +12,7 @@ export default function HalamanProfile() {
           Our Team
         </h1>
 
-        <div className="flex items-center mt-4">
+        <div className="flex items-center mt-[14px]">
           {/* Bell Icon */}
           <div className="w-14 h-14 rounded-full bg-customPurple flex items-center justify-center mr-10">
             <Image src={"/bell.svg"} alt="Bell" width={32} height={32} />
@@ -23,7 +23,11 @@ export default function HalamanProfile() {
       {/* Team Member Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-[49px] mr-[39px]ml-[37px]">
         {[
-          { name: "Rusel Hutajulu", number: "2231167", role: "Data Collection" },
+          {
+            name: "Rusel Hutajulu",
+            number: "2231167",
+            role: "Data Collection",
+          },
           { name: "Steby", number: "2231001", role: "Backend" },
           { name: "Wesly", number: "2231075", role: "Backend" },
           { name: "Kelvin Jonatan", number: "2231124", role: "Data Scientist" },

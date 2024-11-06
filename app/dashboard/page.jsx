@@ -13,7 +13,7 @@ export default function HalamanDashboard() {
           Welcome, xxx!
         </h1>
 
-        <div className="flex items-center">
+        <div className="flex items-center mt-[14px]">
           {/* Bell Icon */}
           <div className="w-14 h-14 rounded-full bg-customPurple flex items-center justify-center">
             <Image src={"/bell.svg"} alt="Bell" width={32} height={32} />
@@ -55,7 +55,7 @@ export default function HalamanDashboard() {
       </h1>
 
       {/* Recommendation Cards Section */}
-      <div className="flex justify-center items-center mt-5">
+      <div className="flex justify-center items-center mt-[12px]">
         {/* Left Arrow Icon */}
         <ArrowLeftCircleIcon className="text-black" />
 
@@ -132,7 +132,7 @@ export default function HalamanDashboard() {
         XXX PROFILE
       </h1>
       {/* Profile Picture Under XXX PROFILE */}
-      <div className="flex border border-black/30 mt-3 shadow-md h-[301px] mx-[40px] rounded-[21px]">
+      <div className="flex border border-black/30 mt-[40px] shadow-md h-[301px] w-[780px] mx-[40px] rounded-[21px]">
         <div className="grid grid-cols-1 md:grid-cols-3">
           <div className="col-span-1">
             <div className="flex  justify-center border-r-2 ">
@@ -161,7 +161,7 @@ export default function HalamanDashboard() {
               <div className="bg-black  "></div>
             </div>
           </div>
-          <div className="col-span-2 mt-10 ml-[35px]">
+          <div className="col-span-2 mt-[21px] ml-[35px]">
             <div className="flex justify-between">
               <div className="flex flex-col">
                 <h1 className={`${roboto.className} text-center font-bold `}>
@@ -200,7 +200,7 @@ export default function HalamanDashboard() {
                 </div>
 
                 <h1
-                  className={`${roboto.className} font-bold text-[16px] text-center mt-[9px]`}
+                  className={`${roboto.className} font-bold text-[16px] ml-[38px] text-center mt-[9px]`}
                 >
                   BUDGET ESTIMATION
                 </h1>
