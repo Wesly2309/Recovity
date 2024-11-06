@@ -114,17 +114,17 @@ export default function HalamanDashboard() {
         <ArrowRightCircleIcon className="text-black" />
       </div>
       {/* Linear Determinate SVG */}
-     <div className="flex justify-center">
-     <img
-        src="/linear-determinate.svg"
-        alt="Linear Determinate"
-        style={{
-          width: "267px",
-          height: "12px",
-          marginTop: "18px",
-        }}
-      />
-     </div>
+      <div className="flex justify-center">
+        <img
+          src="/linear-determinate.svg"
+          alt="Linear Determinate"
+          style={{
+            width: "267px",
+            height: "12px",
+            marginTop: "18px",
+          }}
+        />
+      </div>
       {/* XXX PROFILE */}
       <h1
         className={`${rethink_sans.className} underline mt-28 font-bold uppercase text-black text-center text-[24px]`}
@@ -136,48 +136,84 @@ export default function HalamanDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-3">
           <div className="col-span-1">
             <div className="flex  justify-center border-r-2 ">
-             <div className="flex flex-col">
-             <div className="flex justify-center">
-             <Image src={'/kimjiwon.jpeg'} alt="Kim Ji Won" width={135} height={135} className="rounded-full ml-[35px] mt-[40px]"/>
+              <div className="flex flex-col">
+                <div className="flex justify-center">
+                  <Image
+                    src={"/kimjiwon.jpeg"}
+                    alt="Kim Ji Won"
+                    width={135}
+                    height={135}
+                    className="rounded-full ml-[35px] mt-[40px]"
+                  />
+                </div>
+                <h1
+                  className={`${reemkufiink.className} text-[30px] mt-2  text-black/65 ml-[34px] `}
+                >
+                  STUDENT
+                </h1>
+                <p
+                  className={`${rethink_sans.className}text-black opacity-[0.4] ml-[30px] font-bold text-center text-[14px]`}
+                >
+                  Sistem Informasi
+                </p>
+              </div>
 
-             </div>
-             <h1 className={`${reemkufiink.className} text-[30px] mt-2  text-black/65 ml-[34px] `}>STUDENT</h1>
-             <p className={`${rethink_sans.className}text-black opacity-[0.4] ml-[30px] font-bold text-center text-[14px]`}>Sistem Informasi</p>
-             </div>
-
-             <div className="bg-black  "></div>
+              <div className="bg-black  "></div>
             </div>
           </div>
           <div className="col-span-2 mt-10 ml-[35px]">
             <div className="flex justify-between">
               <div className="flex flex-col">
-                <h1 className={`${roboto.className} text-center font-bold `}>SUBJECT INTEREST</h1>
+                <h1 className={`${roboto.className} text-center font-bold `}>
+                  SUBJECT INTEREST
+                </h1>
                 <div className="bg-blue4 drop-shadow-lg  w-[191px] h-[221px] rounded-[21px]">
-                  <div className="flex flex-col mt-[34px] space-y-6" >
-                    <p className={`${roboto.className} font-extrabold text-lg text-center text-white `}>Animasi 2D</p>
-                    <p className={`${roboto.className} font-extrabold text-lg text-center text-white `}>Machine Learning</p>
-                    <p className={`${roboto.className} font-extrabold text-lg text-center text-white `}>Pemograman Web</p>
+                  <div className="flex flex-col mt-[34px] space-y-6">
+                    <p
+                      className={`${roboto.className} font-extrabold text-lg text-center text-white `}
+                    >
+                      Animasi 2D
+                    </p>
+                    <p
+                      className={`${roboto.className} font-extrabold text-lg text-center text-white `}
+                    >
+                      Machine Learning
+                    </p>
+                    <p
+                      className={`${roboto.className} font-extrabold text-lg text-center text-white `}
+                    >
+                      Pemograman Web
+                    </p>
                   </div>
                 </div>
               </div>
               <div className="flex flex-col mt-[30px] ">
-                <h1 className={`${roboto.className} font-bold text-[16px] text-center`}>MAJOR</h1>
-                <div className="w-[191px] h-[38px] bg-blue4 flex justify-center items-center rounded-[21px] drop-shadow-lg ml-[30px]" >
-                  <p className={`${roboto.className} font-bold  text-white`}>Sistem Informasi</p>
+                <h1
+                  className={`${roboto.className} font-bold text-[16px] text-center`}
+                >
+                  MAJOR
+                </h1>
+                <div className="w-[191px] h-[38px] bg-blue4 flex justify-center items-center rounded-[21px] drop-shadow-lg ml-[30px]">
+                  <p className={`${roboto.className} font-bold  text-white`}>
+                    Sistem Informasi
+                  </p>
                 </div>
 
-                <h1 className={`${roboto.className} font-bold text-[16px] text-center mt-[9px]`}>BUDGET ESTIMATION</h1>
-                <div className="w-[191px] h-[38px] bg-blue4 flex justify-center items-center rounded-[21px] drop-shadow-lg ml-[30px]" >
-                  <p className={`${roboto.className} font-bold  text-white`}>Medium</p>
+                <h1
+                  className={`${roboto.className} font-bold text-[16px] text-center mt-[9px]`}
+                >
+                  BUDGET ESTIMATION
+                </h1>
+                <div className="w-[191px] h-[38px] bg-blue4 flex justify-center items-center rounded-[21px] drop-shadow-lg ml-[30px]">
+                  <p className={`${roboto.className} font-bold  text-white`}>
+                    Medium
+                  </p>
                 </div>
               </div>
-              
             </div>
-
           </div>
         </div>
       </div>
     </>
   );
 }
-  
