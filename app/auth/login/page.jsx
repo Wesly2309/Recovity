@@ -4,7 +4,9 @@ import Link from "next/link";
 export default function HalamanLogin() {
   return (
     <div>
-      <h1 className={`text-secondary text-[45px] text-center mt-12`}>LOGIN</h1>
+      <h1 className={`text-secondary font-bold text-[45px] text-center mt-12`}>
+        LOGIN
+      </h1>
       <div className="flex flex-col mt-12">
         <Image
           src="/Logo_UIB.png"

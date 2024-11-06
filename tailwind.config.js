@@ -20,6 +20,7 @@ module.exports = {
         blue3: '#1C5BB9',
         blue4: '#226cda',
         customPurple: '#674DFF',
+        whiteGrey: '#000000'
       },
       screens : {
         'custom-1024x768': { 'raw': '(min-width: 1024px) and (min-height: 768px)' }
