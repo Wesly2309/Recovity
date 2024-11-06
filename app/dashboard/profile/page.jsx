@@ -12,7 +12,7 @@ export default function HalamanProfile() {
           My Profile
         </h1>
 
-        <div className="flex items-center">
+        <div className="flex items-center mt-[14px]">
           {/* Bell Icon */}
           <div className="w-14 h-14 rounded-full bg-customPurple flex items-center justify-center mr-10">
             <Image src={"/bell.svg"} alt="Bell" width={32} height={32} />
@@ -47,7 +47,7 @@ export default function HalamanProfile() {
                   </h1>
 
                   {/* Edit Nickname Button - Positioned to the Right of "xxx" */}
-                  <div className="ml-[15px] w-[135px] h-[25px] mt-1 flex border border-black/30 bg-white rounded-[30px] items-center justify-center">
+                  <div className="ml-[15px] w-[135px] h-[25px] mt-1 flex border border-blackGrey/30 bg-white rounded-[15px] items-center justify-center">
                     <span
                       className={`${rethink_sans.className} text-[13px] mr-1 text-whiteGrey opacity-[29%]`}
                     >
@@ -94,9 +94,7 @@ export default function HalamanProfile() {
               >
                 Name
               </h1>
-              <h1
-                className={`${rethink_sans.className} mt-[5px] text-[20px]`}
-              >
+              <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
                 xxx
               </h1>
               <h1
@@ -104,9 +102,7 @@ export default function HalamanProfile() {
               >
                 Email Address
               </h1>
-              <h1
-                className={`${rethink_sans.className} mt-[5px] text-[20px]`}
-              >
+              <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
                 xxx@gmail.com
               </h1>
               <h1
@@ -114,9 +110,7 @@ export default function HalamanProfile() {
               >
                 Phone Number
               </h1>
-              <h1
-                className={`${rethink_sans.className} mt-[5px] text-[20px]`}
-              >
+              <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
                 +62x-xxx-xxx
               </h1>
             </div>
@@ -129,9 +123,7 @@ export default function HalamanProfile() {
             >
               Address
             </h1>
-            <h1
-              className={`${rethink_sans.className} mt-[5px] text-[20px]`}
-            >
+            <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
               Jl. xx
             </h1>
             <h1
@@ -139,9 +131,7 @@ export default function HalamanProfile() {
             >
               City
             </h1>
-            <h1
-              className={`${rethink_sans.className} mt-[5px] text-[20px]`}
-            >
+            <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
               Batam
             </h1>
             <h1
@@ -149,9 +139,7 @@ export default function HalamanProfile() {
             >
               Postal Code
             </h1>
-            <h1
-              className={`${rethink_sans.className} mt-[5px] text-[20px]`}
-            >
+            <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
               xxxxxx
             </h1>
           </div>
