@@ -45,7 +45,7 @@ export default function HalamanLogin() {
           />
         </div>
         <div className="bg-lightblue rounded-full w-[46px] h-[43px] flex items-center justify-center ml-[5px]">
-          <Image src="/user-icon.svg" width={26} height={25} alt="user-icon" />
+          <Image src="/user-icon.svg" width={23} height={25} alt="user-icon" />
         </div>
       </div>
     </div>
