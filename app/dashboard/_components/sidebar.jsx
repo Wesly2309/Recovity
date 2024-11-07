@@ -36,7 +36,7 @@ export default function Sidebar() {
 
   return (
     <div className="bg-primary">
-      <div className="flex flex-col mt-[154px]">
+      <div className="flex flex-col mt-14">
         <h1 className="text-white text-6xl text-center font-bold relative">
           <span className="text-green1">RECOVITY</span>
           <span className="absolute inset-0 text-white translate-x-1 translate-y-1">
@@ -80,7 +80,7 @@ export default function Sidebar() {
               </h1>
             </Link>
           ))}
-          <div className="flex justify-center mt-[56px] mx-[37px]">
+          <div className="flex justify-center mt-[51px] mx-[37px]">
             <div className="flex items-center justify-center bg-white rounded-[26px] w-[203px] h-[37px] shadow">
               <img
                 src="/log-out.svg"
@@ -95,7 +95,7 @@ export default function Sidebar() {
               </h1>
             </div>
           </div>
-          <div className="flex mt-[165px] mx-[46px]">
+          <div className="flex mt-[260px] mx-[46px]">
             <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center">
               <img
                 src="/instagram.svg"

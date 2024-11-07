@@ -5,7 +5,7 @@ export default function HalamanTeam() {
   return (
     <>
       {/* Header Section */}
-      <div className="flex items-center justify-between">
+     <div className="flex items-center justify-between">
         <h1
           className={`${rethink_sans.className} font-bold mt-[122px] ml-[161px] text-[36px] underline`}
         >
@@ -39,7 +39,7 @@ export default function HalamanTeam() {
         </div>
       </div>
       <h1
-        className={`${roboto.className} text-center w-[774px] h-[344px] ml-[31px] mr-[4px] text-[14px]`}
+        className={`${roboto.className} text-center   pt-[320px]  w-[774px] h-[344px]  text-[14px]`}
       >
         *All data acquired will only be used for development purposes and not be
         spread or given without permission.

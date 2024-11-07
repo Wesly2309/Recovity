@@ -62,7 +62,7 @@ export default function HalamanDashboard() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-4">
           {/* Card 1 */}
-          <div className="w-[208px] h-[84px] p-3 rounded-[10px] bg-blue4 text-white flex flex-col items-center justify-center">
+          <div className="w-[225px] h-[84px] p-3 rounded-[10px] bg-blue4 text-white flex flex-col items-center justify-center">
             <span
               className={`${roboto.className} text-[11px] font-bold text-center`}
             >
@@ -127,15 +127,15 @@ export default function HalamanDashboard() {
       </div>
       {/* XXX PROFILE */}
       <h1
-        className={`${rethink_sans.className} underline mt-28 font-bold uppercase text-black text-center text-[24px]`}
+        className={`${rethink_sans.className} underline mt-[38px] font-bold uppercase text-black text-center text-[24px]`}
       >
         XXX PROFILE
       </h1>
       {/* Profile Picture Under XXX PROFILE */}
-      <div className="flex border border-black/30 mt-[40px] shadow-md h-[301px] w-[780px] mx-[40px] rounded-[21px]">
+      <div className="flex border border-black/30 mt-5 mb-[38px] shadow-md h-[301px] w-[780px] mx-[40px] rounded-[21px]">
         <div className="grid grid-cols-1 md:grid-cols-3">
           <div className="col-span-1">
-            <div className="flex  justify-center border-r-2 ">
+            <div className="flex  justify-center  ">
               <div className="flex flex-col">
                 <div className="flex justify-center">
                   <Image
@@ -158,7 +158,8 @@ export default function HalamanDashboard() {
                 </p>
               </div>
 
-              <div className="bg-black  "></div>
+              <div className="border border-black mt-[15px] ml-[20px] h-64"></div>
+
             </div>
           </div>
           <div className="col-span-2 mt-[21px] ml-[35px]">

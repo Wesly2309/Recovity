@@ -21,7 +21,7 @@ export default function HalamanTeam() {
       </div>
 
       {/* Team Member Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-[49px] mr-[39px]ml-[37px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3  gap-y-12 mt-[49px] mr-[39px] ml-[37px]">
         {[
           {
             name: "Rusel Hutajulu",
@@ -36,7 +36,7 @@ export default function HalamanTeam() {
         ].map((member, index) => (
           <div
             key={index}
-            className="w-full max-w-[206px] h-[266px] bg-white rounded-[15px] border border-blueGrey shadow-lg shadow-blueGrey flex flex-col items-center p-4 mx-auto"
+            className="w-full max-w-[206px] h-[266px] bg-white rounded-[15px] border  border-blueGrey/15 shadow-lg  shadow-blueGrey flex flex-col items-center p-4 mx-auto"
           >
             {/* Profile Image */}
             <Image
