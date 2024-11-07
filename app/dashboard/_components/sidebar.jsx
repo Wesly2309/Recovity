@@ -1,11 +1,15 @@
 "use client";
 import Link from "next/link";
 import { Info, User, Users } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { rethink_sans } from "../../../libs/fonts";
 
 export default function Sidebar() {
+  const router = useRouter()
   const pathName = usePathname();
+
+
+  const handleLogout = () => router.push('/auth/login')
 
   const sidebaritems = [
     {
@@ -81,7 +85,7 @@ export default function Sidebar() {
             </Link>
           ))}
           <div className="flex justify-center mt-[51px] mx-[37px]">
-            <div className="flex items-center justify-center bg-white rounded-[26px] w-[203px] h-[37px] shadow">
+            <button onClick={handleLogout} className="flex items-center justify-center bg-white rounded-[26px] w-[203px] h-[37px] shadow">
               <img
                 src="/log-out.svg"
                 alt="Log Out"
@@ -93,7 +97,7 @@ export default function Sidebar() {
               >
                 LOG OUT
               </h1>
-            </div>
+            </button>
           </div>
           <div className="flex mt-[260px] mx-[46px]">
             <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center">

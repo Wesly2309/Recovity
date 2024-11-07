@@ -1,8 +1,13 @@
+'use client'
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { reemkufiink, rethink_sans, roboto } from "../../libs/fonts";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HalamanDashboard() {
+  const router = useRouter()
+
+  const handleClckProfile = () => router.push('/dashboard/profile')
   return (
     <>
       {/* Header Section */}
@@ -21,13 +26,15 @@ export default function HalamanDashboard() {
 
           {/* Profile Picture */}
           <div className="w-16 h-14 ml-2 rounded-full bg-white flex items-center justify-center">
-            <Image
+           <button onClick={handleClckProfile}>
+           <Image
               src={"/kimjiwon.jpeg"}
               alt="Profile Picture"
               width={50}
               height={50}
               className="rounded-full"
             />
+           </button>
           </div>
         </div>
       </div>
