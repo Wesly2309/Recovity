@@ -9,7 +9,7 @@ export default function Sidebar() {
   const pathName = usePathname();
 
 
-  const handleLogout = () => router.push('/auth/login')
+  const handleLogout = () => router.push('/auth/loginstudent')
 
   const sidebaritems = [
     {
