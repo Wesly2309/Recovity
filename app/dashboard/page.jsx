@@ -19,11 +19,6 @@ export default function HalamanDashboard() {
         </h1>
 
         <div className="flex items-center mt-[14px]">
-          {/* Bell Icon */}
-          <div className="w-14 h-14 rounded-full bg-customPurple flex items-center justify-center">
-            <Image src={"/bell.svg"} alt="Bell" width={32} height={32} />
-          </div>
-
           {/* Profile Picture */}
           <div className="w-16 h-14 ml-2 rounded-full bg-white flex items-center justify-center">
            <button onClick={handleClckProfile}>

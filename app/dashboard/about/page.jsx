@@ -13,10 +13,6 @@ export default function HalamanTeam() {
         </h1>
 
         <div className="flex items-center mb-[92px]">
-          {/* Bell Icon */}
-          <div className="w-14 h-14 rounded-full bg-customPurple flex items-center justify-center mr-10">
-            <Image src={"/bell.svg"} alt="Bell" width={32} height={32} />
-          </div>
         </div>
       </div>
 
