@@ -96,44 +96,44 @@ export default function HalamanProfile() {
               <h1
                 className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}
               >
-                Email Address
+                Major
               </h1>
               <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-                xxx@gmail.com
+                xx
               </h1>
               <h1
                 className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}
               >
-                Phone Number
+                IPK
               </h1>
               <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-                +62x-xxx-xxx
+                xx
               </h1>
             </div>
           </div>
 
           {/* Right Side Information */}
-          <div className="col-span-1 mt-[91px] mr-[251px]">
+          <div className="col-span-1 mt-[91px] mr-[148px]">
             <h1
               className={`${rethink_sans.className} text-[20px] mt-[15px] text-#000000 opacity-[33%]`}
             >
-              Address
+              Total Class Meeting
             </h1>
             <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-              Jl. xx
+              xx
             </h1>
             <h1
               className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}
             >
-              City
+              Total Attendance
             </h1>
             <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-              Batam
+              xx
             </h1>
             <h1
               className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}
             >
-              Postal Code
+              Advisor Number
             </h1>
             <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
               xxxxxx
