@@ -70,6 +70,11 @@ export default function HalamanProfile() {
                   >
                     Sistem Informasi
                   </p>
+                  <p
+                    className={`${rethink_sans.className} text-black opacity-[33%] text-[20px]`}
+                  >
+                    2231XXX
+                  </p>
                 </div>
               </div>
             </div>
