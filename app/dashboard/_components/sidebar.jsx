@@ -73,12 +73,11 @@ export default function Sidebar() {
                 />
               ) : (
                 <item.icon
-                  className=""
-                  style={{ width: "24px", height: "24px" }}
+                  className="w-6 h-6"
                 />
               )}
               <h1
-                className={` ${rethink_sans.className} style={{ marginLeft: '' }}`}
+                className={` ${rethink_sans.className} `  }
               >
                 {item.label}
               </h1>
@@ -89,8 +88,7 @@ export default function Sidebar() {
               <img
                 src="/log-out.svg"
                 alt="Log Out"
-                className="mr-2"
-                style={{ width: "23px", height: "21px" }}
+                className="mr-2 w-6 h-6"
               />
               <h1
                 className={` ${rethink_sans.className} text-blue3 font-semibold text-[16px]`}
@@ -104,29 +102,29 @@ export default function Sidebar() {
               <img
                 src="/instagram.svg"
                 alt="Instagram"
-                style={{ width: "20px", height: "20px" }}
+                className="w-5 h-5"
               />
             </div>
             <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center ml-[14px]">
               <img
                 src="/twitter.svg"
                 alt="Twitter"
-                style={{ width: "20px", height: "20px" }}
+                className="w-5 h-5"
               />
             </div>
             <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center ml-[14px]">
               <img
                 src="/whatsapp.png"
-                alt="WhatsApp"
-                style={{ width: "18.94px", height: "18.99px" }}
+                alt="WhatsApp" 
+                className="w-5 h-5"
               />
             </div>
             <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center ml-[14px]">
               <img
                 src="/facebook.svg"
                 alt="Facebook"
-                style={{ width: "20px", height: "20px" }}
-              />
+            className="w-5 h-5"
+/>
             </div>
           </div>
         </div>
