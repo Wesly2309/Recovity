@@ -3,13 +3,21 @@ import Link from "next/link";
 import { Info, User, Users } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { rethink_sans } from "../../../libs/fonts";
+import axios from "axios";
 
 export default function Sidebar() {
   const router = useRouter()
   const pathName = usePathname();
 
 
-  const handleLogout = () => router.push('/auth/loginstudent')
+  const handleLogout = async () => {
+    const res = await axios.post('http://localhost:5000/logout')
+    if(res) {
+      console.log(res)
+      localStorage.removeItem('token')
+      router.push('/auth/loginstudent')
+    }
+  }
 
   const sidebaritems = [
     {
@@ -37,6 +45,7 @@ export default function Sidebar() {
       icon: Info,
     },
   ];
+
 
   return (
     <div className="bg-primary">

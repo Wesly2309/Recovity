@@ -13,9 +13,13 @@ export default function HalamanDashboard() {
   // State to store fetched API data and loading status
   const [nama, setNama] = useState('');
   const [prodi, setProdi] = useState('');
+  const [npm, setNpm] = useState('');
+  const [status, setStatus] = useState('');
+  const [student, setStudent] = useState({});
   const [activities, setActivities] = useState([]);
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [subjectinterset , setSubjectInterest] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null); // State untuk menyimpan index card yang sedang di-hover
 
@@ -27,7 +31,6 @@ export default function HalamanDashboard() {
     setHoveredIndex(null); // Reset when the mouse leaves the card
   };
 
-  
   const fetchStudentData = async () => {
     try {
       const token = localStorage.getItem('token');
@@ -50,6 +53,49 @@ export default function HalamanDashboard() {
     }
   };
 
+  const fetchStudentInfo = async () => {
+    try {
+      const token = localStorage.getItem('token')
+      const response = await axios.get("http://localhost:5000/get_detail_student_data", {
+        headers: {
+          Authorization: `Bearer ${token}`, // Replace with your valid JWT token
+        },
+      });
+
+      if (response.data.success) {
+        setStudent(response.data.data.student);
+      } else {
+        console.log("Failed to fetch data:", response.data.message);
+      }
+    } catch (error) {
+      console.log("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    // Fetch data when component mounts
+
+    fetchStudentInfo();
+  }, []); // Empty dependency array ensures this runs once when the component mounts
+
+  const fetchSubjectInterest = async () => {
+    try{
+      const token = localStorage.getItem('token')
+
+      if(token) {
+        const res = await axios.get('http://localhost:5000/subject_interest' , {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        console.log(res.data.data)
+        setSubjectInterest(res.data.data.subject_interests)
+      }
+    }catch(err) {
+      console.log(err)
+    }
+  }
+
   const fetchActivities = async () => {
     try {
       const response = await fetch('http://localhost:5000/activities');
@@ -70,11 +116,10 @@ export default function HalamanDashboard() {
   const fetchRecommendations = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/recommendations', {
+      const response = await axios.get('http://localhost:5000/recommendations', {
         headers: {
           Authorization: `Bearer ${token}`
         },
-        withCredentials: true
       });
       const data = await response.json();
       if (data && data.recommendations) {
@@ -101,6 +146,8 @@ export default function HalamanDashboard() {
     fetchActivities();
     fetchRecommendations();
     fetchStudentData();
+    fetchSubjectInterest();
+    fetchStudentInfo()
   }, []);
 
   const handleClickProfile = () => router.push("/dashboard/profile");
@@ -231,34 +278,31 @@ export default function HalamanDashboard() {
                 </h1>
                 <div className="bg-blue4 drop-shadow-lg w-[191px] h-[221px] rounded-[21px]">
                   <div className="flex flex-col mt-[34px] space-y-6">
-                    <p className={`${roboto.className} font-extrabold text-lg text-center text-white`}>
-                      Animasi 2D
+                    {subjectinterset.map((subject , index) => (
+                      <p key={index} className={`${roboto.className} font-extrabold text-lg text-center text-white`}>
+                      {subject.kategori_matakuliah}
                     </p>
-                    <p className={`${roboto.className} font-extrabold text-lg text-center text-white`}>
-                      Machine Learning
-                    </p>
-                    <p className={`${roboto.className} font-extrabold text-lg text-center text-white`}>
-                      Pemograman Web
-                    </p>
+                    ))}
+                    
                   </div>
                 </div>
               </div>
               <div className="flex flex-col mt-[30px] ">
                 <h1 className={`${roboto.className} font-bold text-[16px] text-center`}>
-                  MAJOR
+                  NPM
                 </h1>
                 <div className="w-[191px] h-[38px] bg-blue4 flex justify-center items-center rounded-[21px] drop-shadow-lg ml-[30px]">
                   <p className={`${roboto.className} font-bold text-white`}>
-                    {prodi}
+                    {student?.npm_mahasiswa}
                   </p>
                 </div>
 
                 <h1 className={`${roboto.className} font-bold text-[16px] ml-[38px] text-center mt-[9px]`}>
-                  BUDGET ESTIMATION
+                  STUDENT STATUS
                 </h1>
                 <div className="w-[191px] h-[38px] bg-blue4 flex justify-center items-center rounded-[21px] drop-shadow-lg ml-[30px]">
                   <p className={`${roboto.className} font-bold text-white`}>
-                    Medium
+                    {student?.status_mahasiswa}
                   </p>
                 </div>
               </div>

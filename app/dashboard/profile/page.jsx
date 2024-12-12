@@ -6,7 +6,7 @@ import { reemkufiink, rethink_sans, roboto } from "../../../libs/fonts";
 
 export default function HalamanProfile() {
   const [student, setStudent] = useState(null);
-  const [mataKuliah, setMataKuliah] = useState([]);
+  const [totalsks , setTotalSKS] = useState(0)
 
   const fetchStudentData = async () => {
     try {
@@ -19,7 +19,7 @@ export default function HalamanProfile() {
 
       if (response.data.success) {
         setStudent(response.data.data.student);
-        setMataKuliah(response.data.data.mata_kuliah);
+        setTotalSKS(Number(response.data.data.sks[0].total_sks))
       } else {
         console.log("Failed to fetch data:", response.data.message);
       }
@@ -72,14 +72,6 @@ export default function HalamanProfile() {
                   <h1 className={`${rethink_sans.className} font-bold text-[32px]`}>
                     {student.nama_mahasiswa || "xxx"}
                   </h1>
-
-                  {/* Edit Nickname Button */}
-                  <div className="ml-[15px] w-[135px] h-[25px] mt-1 flex border border-blackGrey/30 bg-white rounded-[15px] items-center justify-center">
-                    <span className={`${rethink_sans.className} text-[13px] mr-1 text-whiteGrey opacity-[29%]`}>
-                      Edit Nickname
-                    </span>
-                    <Image src="/edit-icon.svg" alt="Edit Icon" width={16} height={16} />
-                  </div>
                 </div>
 
                 {/* Align STUDENT and Sistem Informasi Text Below */}
@@ -118,38 +110,34 @@ export default function HalamanProfile() {
 
               <h1 className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}>IPK</h1>
               <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-                {student.ipk_mahasiswa || "xx"}
+                {student.ipk_mahasiswa }
               </h1>
             </div>
           </div>
 
           {/* Right Side Information */}
           <div className="col-span-1 mt-[91px] mr-[148px]">
-            {
-              mataKuliah.map((mata , index) => (
-                <div key={index}>
+           
                 <h1 className={`${rethink_sans.className} text-[20px] mt-[15px] text-#000000 opacity-[33%]`}>
-              Total Class Meeting
+              Total SKS 
             </h1>
             <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-              {mata.total_pertemuan || "xx"}
+              {144}
             </h1>
 
             <h1 className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}>
-              Total Attendance
+              SKS
             </h1>
             <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-              {mata.total_hadir || "xx"}
+              {totalsks}
             </h1>
-                </div>
-              ))
-            }
+                
 
             <h1 className={`${rethink_sans.className} text-[20px] mt-[52px] text-#000000 opacity-[33%]`}>
-              Grade Student
+              Selisih SKS
             </h1>
             <h1 className={`${rethink_sans.className} mt-[5px] text-[20px]`}>
-              {student.angkatan_mahasiswa || "xxxxxx"}
+              {144 - totalsks}
             </h1>
           </div>
         </div>
