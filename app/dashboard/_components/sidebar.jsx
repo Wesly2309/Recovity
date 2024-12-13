@@ -6,18 +6,17 @@ import { rethink_sans } from "../../../libs/fonts";
 import axios from "axios";
 
 export default function Sidebar() {
-  const router = useRouter()
+  const router = useRouter();
   const pathName = usePathname();
 
-
   const handleLogout = async () => {
-    const res = await axios.post('http://localhost:5000/logout')
-    if(res) {
-      console.log(res)
-      localStorage.removeItem('token')
-      router.push('/auth/loginstudent')
+    const res = await axios.post("http://localhost:5000/logout");
+    if (res) {
+      console.log(res);
+      localStorage.removeItem("token");
+      router.push("/auth/loginstudent");
     }
-  }
+  };
 
   const sidebaritems = [
     {
@@ -25,12 +24,6 @@ export default function Sidebar() {
       label: "Home",
       path: "/dashboard",
       icon: "/home.svg",
-    },
-    {
-      id: 2,
-      label: "Profile",
-      path: "/dashboard/profile",
-      icon: User,
     },
     {
       id: 3,
@@ -45,7 +38,6 @@ export default function Sidebar() {
       icon: Info,
     },
   ];
-
 
   return (
     <div className="bg-primary">
@@ -71,7 +63,7 @@ export default function Sidebar() {
                   ? "w-[126px] h-[40px] rounded-[21px] bg-blue2 mx-[67px] mr-[74px]"
                   : "mx-[67px] mr-[74px]"
               }`}
-              style={{ marginTop: index > 0 ? "31px" : "0" }}
+              style={{ marginTop: index > 0 ? "60px" : "0" }}
             >
               {item.icon === "/home.svg" ? (
                 <img
@@ -81,60 +73,23 @@ export default function Sidebar() {
                   style={{ width: "24px", height: "24px" }}
                 />
               ) : (
-                <item.icon
-                  className="w-6 h-6"
-                />
+                <item.icon className="w-6 h-6" />
               )}
-              <h1
-                className={` ${rethink_sans.className} `  }
-              >
-                {item.label}
-              </h1>
+              <h1 className={` ${rethink_sans.className} `}>{item.label}</h1>
             </Link>
           ))}
-          <div className="flex justify-center mt-[51px] mx-[37px]">
-            <button onClick={handleLogout} className="flex items-center justify-center bg-white rounded-[26px] w-[203px] h-[37px] shadow">
-              <img
-                src="/log-out.svg"
-                alt="Log Out"
-                className="mr-2 w-6 h-6"
-              />
+          <div className="flex justify-center mt-[70px] mx-[37px]">
+            <button
+              onClick={handleLogout}
+              className="flex items-center justify-center bg-white rounded-[26px] w-[203px] h-[37px] shadow"
+            >
+              <img src="/log-out.svg" alt="Log Out" className="mr-2 w-6 h-6" />
               <h1
                 className={` ${rethink_sans.className} text-blue3 font-semibold text-[16px]`}
               >
                 LOG OUT
               </h1>
             </button>
-          </div>
-          <div className="flex mt-[260px] mx-[46px]">
-            <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center">
-              <img
-                src="/instagram.svg"
-                alt="Instagram"
-                className="w-5 h-5"
-              />
-            </div>
-            <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center ml-[14px]">
-              <img
-                src="/twitter.svg"
-                alt="Twitter"
-                className="w-5 h-5"
-              />
-            </div>
-            <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center ml-[14px]">
-              <img
-                src="/whatsapp.png"
-                alt="WhatsApp" 
-                className="w-5 h-5"
-              />
-            </div>
-            <div className="bg-customPurple rounded-full w-[36px] h-[35px] flex items-center justify-center ml-[14px]">
-              <img
-                src="/facebook.svg"
-                alt="Facebook"
-            className="w-5 h-5"
-/>
-            </div>
           </div>
         </div>
       </div>

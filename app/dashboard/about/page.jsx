@@ -5,15 +5,14 @@ export default function HalamanTeam() {
   return (
     <>
       {/* Header Section */}
-     <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <h1
           className={`${rethink_sans.className} font-bold mt-[122px] ml-[161px] text-[36px] underline`}
         >
           About
         </h1>
 
-        <div className="flex items-center mb-[92px]">
-        </div>
+        <div className="flex items-center mb-[92px]"></div>
       </div>
 
       <div className="flex items-center justify-between">
