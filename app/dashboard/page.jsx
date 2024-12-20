@@ -246,7 +246,7 @@ export default function HalamanDashboard() {
         {nama}'s PROFILE
       </h1>
       {/* Personal Information Section */}
-      <div className="flex border border-black/30 shadow-md mt-[25px] h-[580px] mx-[30px] rounded-[15px]">
+      <div className="flex border border-black/30 shadow-md md:my-[20px] my-[80px]  h-[580px] mx-[30px] rounded-[15px]">
         <div className="grid grid-cols-2 gap-20">
           <div className="col-span-1 ml-[24px] mt-[24px]">
             <h1 className={`${rethink_sans.className} font-bold text-[32px]`}>

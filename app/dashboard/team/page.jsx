@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { rethink_sans, roboto } from "../../../libs/fonts";
 
+const fotoTeam = [{
+  foto:'./'
+}]
+
+
 export default function HalamanTeam() {
   return (
     <>
@@ -32,16 +37,10 @@ export default function HalamanTeam() {
         ].map((member, index) => (
           <div
             key={index}
-            className="w-full max-w-[206px] h-[266px] bg-white rounded-[15px] border  border-blueGrey/15 shadow-lg  shadow-blueGrey flex flex-col items-center p-4 mx-auto"
+            className="w-full max-w-[206px] h-[150px] bg-white rounded-[15px] border  border-blueGrey/15 shadow-lg  shadow-blueGrey flex flex-col items-center p-4 mx-auto"
           >
             {/* Profile Image */}
-            <Image
-              src={"/kimjiwon.jpeg"}
-              alt={`${member.name}'s Profile`}
-              width={122}
-              height={122}
-              className="rounded-full"
-            />
+            
             {/* Member Details */}
             <h2 className={`${roboto.className} text-black text-2xl mt-4`}>
               {member.name}

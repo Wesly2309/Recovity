@@ -40,7 +40,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="bg-primary">
+    <div className="bg-primary w-[80%]">
       <div className="flex flex-col mt-14">
         <h1 className="text-white text-6xl text-center font-bold relative">
           <span className="text-green1">RECOVITY</span>
